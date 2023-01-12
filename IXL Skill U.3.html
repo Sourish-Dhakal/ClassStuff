@@ -1,0 +1,56 @@
+<html>
+<head>
+</head>
+<body>
+    <a href="index.html">Cell Memorization</a>
+<a href="Circle Calculator.html">Circle Calculator</a>
+<a href="IXL Skill U.3.html">IXL Skill U.3</a>
+<script>
+var prop=parseInt(prompt("What do you want? 1 for Circle, 2 for Triangle and 3 for Rectangles."));
+if (prop==1) {
+    CircleFormula();
+}
+else if (prop==2) {
+    TriangleFormula();
+}
+else {
+    RectangleFormula();
+}
+function TriangleFormula() {
+    var BofTriangleOne=parseFloat(prompt("What is the base of inner triangle?"));
+    var HofTriangleOne=parseFloat(prompt("What is the height of the inner triangle?"));
+    var AofTriangleOne=(BofTriangleOne*HofTriangleOne)/2;
+    var BofTriangleTwo=parseFloat(prompt("What is the base of outer triangle?"));
+    var HofTriangleTwo=parseFloat(prompt("What is the height of the outer triangle?"));
+    var AofTriangleTwo=((BofTriangleTwo*HofTriangleTwo)/2)-AofTriangleOne;
+    document.write("Inner Triangle Base: ", BofTriangleOne, "<br>Height of Inner Triangle: ",HofTriangleOne,"<br>Area of Inner Triangle:", AofTriangleOne);
+    document.write("<br>Outer Triangle Base: ", BofTriangleTwo, "<br>Height of Outer Triangle: ",HofTriangleTwo,"<br>Area of Outer Triangle + Area of Inner Triangle:", AofTriangleTwo+AofTriangleOne);
+    document.write("<br><b>Area of Triangle Two: </b>",Math.round(100*AofTriangleTwo)/100);
+}
+function RectangleFormula() {
+    var BofRectangleOne=parseFloat(prompt("What is the base of the inner rectangle?"));
+    var HofRectangleOne=parseFloat(prompt("What is the height of the inner rectangle?"));
+    var BofRectangleTwo=parseFloat(prompt("What is the base of the outer rectangle?"));
+    var HofRectangleTwo=parseFloat(prompt("What is the height of the outer rectangle?"));
+    var AofRectangleOne=BofRectangleOne*HofRectangleOne;
+    var AofRectangleTwo=BofRectangleTwo*HofRectangleTwo;
+    document.write("Inner Rectangle Base: ", BofRectangleOne, "<br>Inner Rectangle Height: ", HofRectangleOne, "<br>Inner Rectangle Area: ", AofRectangleOne);
+    document.write("<br>Outer Rectangle Base: ", BofRectangleTwo, "<br>Outer Rectangle Height: ", HofRectangleTwo, "<br>Outer Rectangle Area: ", AofRectangleTwo);
+    document.write("<br><b>Area of Shaded Region: </b>", Math.round(100*(AofRectangleTwo-AofRectangleOne))/100);
+}
+
+
+function CircleFormula() {
+    var CofCircleOne=parseFloat(prompt("What is the circumference of inner circle?"));
+    var RofCircleOne=(CofCircleOne/3.14)/2
+    var AofCircleOne=(RofCircleOne*RofCircleOne)*3.14;
+    var extraRadiusofCircleTwo=parseFloat(prompt("What is the extra radius of the outer circle?"));
+    var RofCircleTwo=RofCircleOne+extraRadiusofCircleTwo;
+    var AofCircleTwo=((RofCircleTwo*RofCircleTwo)*3.14)-AofCircleOne;
+    document.write("Inner Circle Circumference: ", CofCircleOne, "<br>Radius of Inner Circle: ",RofCircleOne,"<br>Area of Inner Circle:", AofCircleOne);
+    document.write("<br>Extra Radius of Circle Two: ",extraRadiusofCircleTwo,"<br> Radius of Circle Two: ", RofCircleTwo,); 
+    document.write("<br><b>Area of Circle Two: </b>",Math.round(100*AofCircleTwo)/100);
+}
+</script>
+</body>
+</html>

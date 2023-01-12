@@ -1,0 +1,33 @@
+<!Circle Calculator>
+<html>
+<head></head>
+<body>
+    <a href="index.html">Cell Memorization</a>
+<a href="Circle Calculator.html">Circle Calculator</a>
+<a href="IXL Skill U.3.html">IXL Skill U.3</a>
+<script>
+var radius=parseFloat(prompt("Insert Radius"));
+document.write("<h1>If Radius Given</h1><br>The Diameter is ",radius*2);
+document.write("<br>The Circumference is ",6.28*radius);
+document.write("<br>The Area is ",(radius*radius)*3.14);
+var circumference=parseFloat(prompt("Insert Circumference"));
+radius=circumference/6.28;
+document.write("<br><h1>If Circumference Given</h1>")
+document.write("<br>The Radius is ",radius);
+document.write("<br>The Diameter is ",radius*2);
+document.write("<br>The Area is ",(radius*radius)*3.14);
+var area=parseFloat(prompt("Insert Area"));
+radius=Math.sqrt(area/3.14);
+document.write("<br><h1>If Area Given</h1>");
+document.write("<br>The Radius is ",radius);
+document.write("<br>The Diameter is ",radius*2);
+document.write("<br>The Circumference is ",6.28*radius)
+var diameter=parseFloat(prompt("Insert Diameter"));
+radius=diameter;
+document.write("<br><h1>If Diameter Given</h1><br>");
+document.write("<br>The Area is ",(radius*radius)*3.14);
+document.write("<br>The Radius is ",radius);
+document.write("<br>The Circumference is ",6.28*radius);
+</script>
+</body>
+</html>
