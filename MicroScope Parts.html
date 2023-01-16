@@ -1,0 +1,100 @@
+<!Microscope Parts>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body id="content">
+<center>
+<h1>Microscope Parts Memorization</h1>
+<h2 id="Title">What is this Part?</h2>
+<img src="Microscope.png" id="Image"height="300"></img>
+<br><br>
+<button onclick="Answer(1)">1.Body Tube</button>
+<button onclick="Answer(2)">2.Revolving Nosepiece</button>
+<button onclick="Answer(3)">3.Low-Power Objective</button>
+<button onclick="Answer(4)">4.Medium-Power Objective</button>
+<button onclick="Answer(5)">5.High Power Objective</button>
+<button onclick="Answer(6)">6.Stage Clips</button>
+<button onclick="Answer(7)">7.Diaphragm</button>
+<button onclick="Answer(8)">8.Light Source</button>
+<button onclick="Answer(9)">9.Eye Piece Ocular Lens</button>
+<button onclick="Answer(10)">10.Arm</button>
+<button onclick="Answer(11)">11.Stage</button>
+<button onclick="Answer(12)">12.Coarse Adjustment Knob</button>
+<button onclick="Answer(13)">13. Fine Adjustment Knob</button>
+<button onclick="Answer(14)">14. Base</button>
+</center>
+<button onclick="Next()" id="btnNext">Next</button>
+<a href="index.html">Cell Memorization</a>
+<a href="Circle Calculator.html">Circle Calculator</a>
+<a href="IXL Skill U.3.html">IXL Skill U.3</a>
+<a href="MicroScope Parts.html">Microscope Parts</a>
+<script>
+var rngNumber = 0;
+function Next(){
+    rngNumber=(Math.floor(Math.random()*14))+1;
+    document.getElementById("content").style.color="black";
+    document.getElementById("btnNext").style.display="none";
+    document.getElementById("content").style.backgroundColor="white";
+    document.getElementById("Title").innerHTML="What is this Cell?";
+    if (rngNumber==1) {
+        document.getElementById("Image").src="Body Tube.png";
+    }
+    else if (rngNumber==2) {
+        document.getElementById("Image").src="Revolving Nosepiece.png";
+    }
+    else if (rngNumber==3) {
+        document.getElementById("Image").src="Low Power.png";
+    }
+    else if (rngNumber==4) {
+        document.getElementById("Image").src="Medium Power.png";
+    }
+    else if (rngNumber==5) {
+        document.getElementById("Image").src="High Power.png";
+    }
+	else if (rngNumber==6) {
+		document.getElementById("Image").src="Stage Clips.png";
+	}
+    else if (rngNumber==7) {
+        document.getElementById("Image").src="Diaphragm.png";
+    }
+    else if (rngNumber==8) {
+        document.getElementById("Image").src="Light Source.png";
+    }
+    else if (rngNumber==9) {
+        document.getElementById("Image").src="Eye Piece.png";
+    }
+    else if (rngNumber==10) {
+        document.getElementById("Image").src="Arm.png";
+    }
+    else if (rngNumber==11) {
+        document.getElementById("Image").src="Stage.png";
+    }
+    else if (rngNumber==12) {
+        document.getElementById("Image").src="Coarse Adjustment.png";
+    }
+    else if (rngNumber==13) {
+        document.getElementById("Image").src="Fine Adjustment.png";
+    }
+    else {
+        document.getELementById("Image").src="Base.png";
+    }
+}
+function Answer(a){
+    if (a==rngNumber) {
+        document.getElementById("content").style.backgroundColor="green";
+        document.getElementById("btnNext").style.display="block";
+        document.getElementById("content").style.color="white";
+    }
+    else {
+        document.getElementById("content").style.backgroundColor="red";
+        document.getElementById("btnNext").style.display="block";
+        document.getElementById("Title").innerHTML="The Correct Button was "+rngNumber;
+        document.getElementById("content").style.color="white";
+    }
+}
+</script>
+</body>
+</html>
